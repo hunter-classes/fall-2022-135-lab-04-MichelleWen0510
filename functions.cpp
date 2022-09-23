@@ -134,6 +134,39 @@ std::string trapezoid(int width, int height)
 
 std::string checkerboard3x3(int width, int height)
 {
-	std::string b3x3;               
+	std::string b3x3;
+	bool onSet=true;
+	bool star=true;
+	for(int i=1;i<=height;i++)
+	{
+		if(onSet) {
+		if(i%3==0) {onSet=false;}
+		for(int j=1;j<=width;j++)
+		{
+			if(star)
+			{
+				b3x3=b3x3+"*";
+				if(j%3==0){star=false;}	
+			} else {
+				b3x3=b3x3+" ";
+				if(j%3==0) {star=true;}
+			}
+		}
+		} else if(!onSet){
+		if(i%3==0) {onSet=true;}
+		for(int j=1;j<=width;j++)
+                {       
+                        if(star)
+                        {       
+                                b3x3=b3x3+" ";
+                                if(j%3==0){star=false;}
+                        } else {
+                                b3x3=b3x3+"*";
+                                if(j%3==0) {star=true;}
+                        }
+                }
+		}
+	b3x3=b3x3+"\n";
+	}          
 	return b3x3;
-}
+}	

@@ -40,8 +40,8 @@ int main()
 	
 	std::cout << "checkerboard3x3(13,7);\n";
 	std::cout << checkerboard3x3(13,7);
-	std::cout << "checkerboard3x3(15,9);\n";
-        std::cout << checkerboard3x3(15,9);
+	std::cout << "checkerboard3x3(12,9);\n";
+        std::cout << checkerboard3x3(12,9);
 	std::cout << "\n------------------\n";
 	
 	return 0;
